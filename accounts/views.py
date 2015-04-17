@@ -19,4 +19,4 @@ class Login(FormView):
 		#Validate that user is not already logged in.
 		if request.user.is_authenticated():
 			return redirect(self.success_url)
-		super(Login, self).dispatch(request, *args, **kwargs)
+		return super(Login, self).dispatch(request, *args, **kwargs)
