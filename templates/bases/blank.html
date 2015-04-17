@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Login to Keep</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'utils/materialize/css/materialize.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blank.css' %}" />
+</head>
+
+<body>
+	<section class="row" class="row">
+		<figure id="logo" class="col s2 offset-s5">
+			<img src="{% static 'images/logo.png' %}">
+		</figure>
+	</section>
+	<section class="row">
+		{% block form %}{% endblock %}
+	</section>
+
+	<script src="{% static 'utils/jquery-2.1.3.min.js' %}"></script>
+	<script src="{% static 'utils/materialize/js/materialize.js' %}"></script>
+</body>
+</html>
